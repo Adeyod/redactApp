@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Text Redaction App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="">
+        <div id="inputArea">
+          <h1>Text Redaction App</h1>
+          <textarea
+            id="originalText"
+            placeholder="Enter your text here"
+          ></textarea>
+          <input
+            type="text"
+            id="redactWords"
+            placeholder="Words to redact (space-separated)"
+            required
+          />
+          <input
+            type="password"
+            id="redactReplace"
+            placeholder="Special characters to use to redact"
+            required
+          />
+        </div>
+
+        <div class="">
+          <div class="redactedWord" id="redactedText"></div>
+          <div id="statDiv">
+            <p>Number of words scanned: <span id="wordsCount"></span></p>
+
+            <p>
+              Number of scrambled words:
+              <span id="wordsMatchCount"></span>
+            </p>
+
+            <p>
+              Task completion time:
+              <span id="timeExecution"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <button id="redactButton">Click To Redact</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
